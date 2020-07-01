@@ -1,0 +1,20 @@
+.vertical-menu {
+  overflow-y: auto;
+}
+
+.vertical-menu a {
+  background-color:lightseagreen;
+  color:white;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+.vertical-menu a:hover {
+  background-color:#FFE4C4;
+  color:black;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}

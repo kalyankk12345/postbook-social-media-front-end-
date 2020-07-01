@@ -1,0 +1,12 @@
+<nav class="fixed-nav-bar">
+  <a class="brand">
+    <app-icon [url]='link' ></app-icon>
+  </a>
+  <div class='search'>
+    <app-search placeholder='search friends' color='black' bg='white' height=40 width=520></app-search>
+  </div>
+  <div *ngFor='let i of items'>
+  <app-posthead [link]='i' theme='normal'></app-posthead>
+  </div>
+  <app-logout></app-logout>
+</nav>

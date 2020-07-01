@@ -1,0 +1,12 @@
+<span [ngClass] = "{
+  'select1 small':theme === 'small',
+  'select2 medium':theme === 'medium',
+  'select3 normal':theme === 'normal',
+  'select big':theme === 'big'
+}" >
+  <select [ngStyle]="{'background':color,'display':'inline-block'}" (change)='selectChangeHandler($event)'>
+    <option selected disabled>Choose an option</option>
+    <option *ngFor="let c of items" [value]='c'>{{c|uppercase}}</option>
+  </select>
+</span>
+

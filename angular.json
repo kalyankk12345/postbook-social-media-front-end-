@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "postbook"
+    }
+  },
+  "defaultProject": "postbook",
+  "cli": {
+    "analytics": false
+  }
 }

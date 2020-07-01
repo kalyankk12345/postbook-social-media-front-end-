@@ -1,0 +1,12 @@
+<span [ngClass] = "{
+  'button':b,
+  '-regular':theme === 'regular',
+  '-blue':theme === 'blue',
+  '-salmon':theme === 'salmon' ,
+  '-dark':theme === 'dark' ,
+  '-green':theme === 'green' ,
+  '-sun':theme === 'sun' ,
+  '-alge':theme === 'alge' ,
+  '-flower':theme === 'flower' ,
+  'center':b
+}" [ngStyle]="{'display': 'inline'}">{{text}}</span>

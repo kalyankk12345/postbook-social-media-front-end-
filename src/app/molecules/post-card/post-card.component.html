@@ -1,0 +1,21 @@
+<div class="f-card" *ngFor='let post of posts'>
+  <div class="header">
+    <app-icon [url]='post.profUrl' [title]='post.Title'></app-icon>
+    <app-posthead theme='title' [link]='post.Title'></app-posthead>
+    <app-posthead theme='time' [link]='post.Time'></app-posthead>
+  </div>
+  <app-post-text [text]='post.description'></app-post-text>
+  <app-postimg *ngIf='post.ImageUrl!=""' [video]='post.video' [url]='post.ImageUrl'></app-postimg>
+  <br *ngIf='post.ImageUrl!=""'>
+  <app-posthead *ngIf="post.like=='true'" theme='time' link={{s+post.likedPeople}}> </app-posthead>
+  <app-posthead *ngIf="post.like!='true'" theme='time' [link]='post.likedPeople'></app-posthead>
+<div class="social">
+    <br>
+    <app-buttons *ngIf="post.like!='true'" theme ='green' text='Like' (click)='do(post)'></app-buttons>
+    <app-buttons *ngIf="post.like=='true'" theme ='salmon' text='Dislike' (click)='do(post)'></app-buttons>
+    <app-buttons theme='blue' text='Comment'></app-buttons>
+    <app-buttons theme='sun' text='Share'></app-buttons>
+    <br>
+    <br>
+</div>
+</div>

@@ -1,0 +1,6 @@
+<img *ngIf='video!="true"'  class='postimg' [src]='url'>
+<video (mouseenter)='toggleVideo()' (mouseleave)='toggleVideo1()' *ngIf='video=="true"' class='postimg' #myVideo >
+  <source [src]='url' type="video/mp4">
+</video>
+
+
